@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, "Times New Roman", sans-serif;
+    background-color: #a1bbea;
+}
+
+.wrapper {
+    width: 960px;
+    border: solid 1px black;
+    margin: 0 auto;
+    height: 2000px;
+}
+.clear-fix {
+    clear: both;
+}
+/* header */
+.header{
+    background-color: rebeccapurple;
+}
+.header .container #logo{
+    float: left;
+}
+.header .container h1 {
+    float: left;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+/* nav bar */
+.nav-bar .container{
+    width: 100%;
+    height: 40px;
+    background-color: aquamarine ;
+}
+
+.nav-bar .container .menu {
+    padding-left: 50px;
+}
+
+.nav-bar .container .menu ul {
+    height: 40px;
+    margin:0;
+    padding:0;
+}
+.nav-bar .container .menu li {
+    height: 100%;
+    float:left;
+    background-color: #dddddd;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    list-style-type: none;
+}
+.nav-bar .container li a{
+    position: relative;
+    display: block;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+/* noi dung */
+.main-content .container{
+    position: relative;
+}
+.cols-md-5 {
+    width: 41.6%;
+    float: left;
+    box-sizing: border-box;
+}
+.gradient-bg {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    background: linear-gradient(to right, red , yellow);
+    z-index: -1;
+}
+.text {
+    padding-left: 20px;
+}
+.cols-md-7 {
+    float: left;
+    width: 58.4%;
+}
