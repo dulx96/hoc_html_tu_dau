@@ -105,7 +105,8 @@ body {
     background-color: antiquewhite;
     background-position: right;
 }
-footer .container {
+
+.footer .container {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
