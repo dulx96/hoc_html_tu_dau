@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final_web</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/final_web_style.css">
@@ -11,12 +12,14 @@
 <body>
 <!-- Header -->
 <header>
-    <h1>Learning HTML5</h1>
-    <p>A responsive website tutorial</p>
+        <h1>Learning HTML5</h1>
+        <p>A responsive website tutorial</p>
 </header>
 
 <!-- nav -->
 <nav>
+    <input type="checkbox" id="nav"/>
+    <label for="nav"></label>
     <ul>
         <li><a href="#">Home</a> </li>
         <li><a href="#">Portfolio</a> </li>
@@ -26,7 +29,7 @@
 
 
 <!-- images Slider -->
-<section class="container">
+<section class="img_slider">
     <article id="slider_content">
         <h3>Lorem</h3>
         <p>Tempus habitant mi etiam maxime doloremque? Illo unde.Nulla sit varius culpa, urna quam. Sodales lacus. Vulputate mi fusce rerum volutpat ea beatae? Platea.<a href="#" class="responsive_button">More...</a></p>
@@ -46,7 +49,7 @@
 
 <!-- spacer -->
 <div class="space-overlay">
-    <div class="space-container">
+    <div class="container">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
         <form id="slider-form">
             <input type="text" placeholder="Enter a word...">
@@ -58,7 +61,7 @@
 
 <!-- 3 columns -->
 <section class="three_columns">
-
+    <div class="container">
     <article>
         <img src="images/icon1.png" alt="icon 1">
         <h3>Lorem ipsum</h3>
@@ -76,6 +79,7 @@
         <h3>Dolor sit ame</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quidem magnam tenetur culpa</p>
     </article>
+    </div>
 </section>
 
 <div class="clear-fix"></div>
@@ -272,6 +276,19 @@
         </div>
 
     </div>
+<div class="clear-fix"></div>
+    <section class="copy-right">
+        <div class="copy-right-container">
+            <h4>© Copyright 2016 by <a href="example.com">Example</a>. All Rights Reserved.</h4>
+            <div class="social">
+                <a href="#"> <img src="images/icon6.png" alt="some alt text" width="25px"> </a>
+                <a href="#"> <img src="images/icon7.png" alt="some alt text" width="25px"> </a>
+                <a href="#"> <img src="images/icon8.png" alt="some alt text" width="25px"> </a>
+                <a href="#"> <img src="images/icon9.png" alt="some alt text" width="25px"> </a>
+                <a href="#"> <img src="images/icon10.png" alt="some alt text" width="25px"> </a>
+            </div>
+        </div>
+    </section>
 </footer>
 </body>
 <script src="js/prefixfree.min.js"></script>

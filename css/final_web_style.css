@@ -3,6 +3,7 @@ body {
     background-color: #ebe8de;
     font-family: "Open Sans",sans-serif;
     color: #333333;
+    width: 100%;
 }
 a {
     color:inherit;
@@ -12,27 +13,43 @@ p {
     margin: 5px 0;
     line-height: 25px;
 }
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    width: auto;
+    position: relative;
+}
+
+
 .clear-fix {
     clear:both;
 }
 /* Header */
 header {
     position: relative;
-    width: auto;
-    margin: 0 auto 20px 200px;
+    width: 100%;
+    margin: 0 auto 20px auto;
 }
 header h1{
-    margin: 35px 0 0 0;
+    margin: 35px 0 0 5px;
     font-family: Baumans, sans-serif;
     font-size: 55px;
     font-weight: bold;
     color: #e56038;
+    position: relative;
+    left:200px;
+    max-width: 400px;
+
 }
 header p{
+    position: relative;
+    left:200px;
     margin-left: 5px;
     font-family: "Open Sans",sans-serif;
     font-size: 15px;
     color: #4A463B;
+    display: inline-block;
 }
 
 /* nav */
@@ -63,11 +80,20 @@ nav > ul > li:hover a {
     color: #777;
 }
 
+#nav {
+    display: none;
+}
 /* Slide show */
-.container {
-    margin: 0 auto;
-    width: auto;
+
+.img_slider {
+    width: 100%;
     position: relative;
+}
+.img_slider .button {
+    color:white;
+    background: #1D1D1D;
+    border-radius: 5px;
+    padding: 7px;
 }
 #slider_content {
     line-height: 25px;
@@ -148,29 +174,22 @@ div#slider img {
 /* space */
 .space-overlay{
     background-color: #e56038;
+    padding: 10px 0;
+    width: 100%;
 }
-.space-container {
-    width: 960px;
-    margin: 0 auto;
-    height: auto;
-    overflow: auto;
-    padding: 15px 0;
-    text-align: center;
-}
-.space-container > p {
+
+.space-overlay  p {
     margin: 0;
     display: inline-block;
-    vertical-align: middle;
     font-size: 18px;
     font-family: "Open Sans",sans-serif;
     color: #ebe8de;
 }
 
 #slider-form {
-    margin-top: 3px;
     margin-left: 20px;
     display: inline-block;
-    vertical-align: middle;
+
 }
 #slider-form input {
     padding: 7px;
@@ -191,7 +210,7 @@ div#slider img {
 
 .three_columns {
     margin: 60px auto ;
-    width: 960px;
+    width: 100%;
     overflow: auto;
 }
 
@@ -458,4 +477,141 @@ footer .container .column > p {
     max-width: 60%;
     display: inline-block;
     vertical-align: middle;
+}
+
+.copy-right {
+    width: 100%;
+    background-color: #1D1D1D;
+    height: 70px;
+    font-family: "Open Sans",sans-serif;
+}
+.copy-right .copy-right-container {
+    max-width: 960px;
+    margin: auto;
+    width: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.copy-right .copy-right-container h4{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 14px;
+    color: #5e5e5e;
+}
+
+.copy-right .copy-right-container h4 a {
+    font-size: 16px;
+    color: #ABABAB;
+    transition: color 1s;
+}
+
+.copy-right .copy-right-container h4 a:hover {
+    color: white;
+}
+
+.copy-right .copy-right-container .social {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+}
+
+.copy-right .social a {
+    margin-right: 5px;
+}
+
+
+/* Media queries for a responsive layout - Non-mobile 1st method*/
+@media only screen and (max-width: 1200px) {
+    header h1 {
+        left: 50px;
+    }
+    header p {
+        left: 50px;
+    }
+    nav {
+        right: 50px;
+    }
+    #slider_content {
+        width: auto;
+    }
+    #slider_content h3 {
+        float:left;
+    }
+    #slider_content p {
+        margin-left: 50px;
+        float:left;
+        width: 300px;
+    }
+    #slider_content .button {
+        clear:both;
+        display: block;
+        width: 70px;
+        position: relative;
+        left: 155px;
+        top: -15px;
+        padding: 5px 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    #slider_content p {
+        margin-left: 50px;
+        float:left;
+        width: 600px;
+    }
+    .three_columns article {
+        float: none;
+        width: 60%;
+        margin: 20px auto;
+        clear: both;
+    }
+    nav {
+        top: 10px;
+        right: 0;
+        margin: 0;
+    }
+    nav ul {
+        display: none;
+    }
+
+    nav label {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 25px;
+        top: 0;
+        right: 10px;
+        cursor: pointer;
+    }
+    nav label:after {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 5px;
+        background: #eda28c;
+        box-shadow: 0px 10px 0px #eda28c, 0px 20px 0px #eda28c;
+    }
+
+    #nav:checked ~ ul {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        width: 100px;
+
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+        background: #e56038;
+        font-size: 14px;
+    }
+    nav ul li a {
+        line-height: 30px;
+    }
 }
